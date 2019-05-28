@@ -36,4 +36,15 @@ class Song
       end
     end
   end
+  
+  def self.artist_count
+    count = {}
+    @@artists.each do |artist|
+      if count.values.include?(artist)
+        count[artist] += 1
+      else
+        count[artist] = 1
+      end
+    end
+  end
 end
