@@ -33,7 +33,7 @@ class Song
   def self.genre_count
     count = {}
     @@genres.each do |genre|
-      if count.values.include?(genre)
+      if count.keys.include?(genre)
         count[genre] += 1
       else
         count[genre] = 1
@@ -45,7 +45,7 @@ class Song
   def self.artist_count
     count = {}
     @@artists.each do |artist|
-      if count.values.include?(artist)
+      if count.keys.include?(artist)
         count[artist] += 1
       else
         count[artist] = 1
