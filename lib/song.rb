@@ -14,6 +14,10 @@ class Song
     @@artists << artist
   end
   
+  def self.count
+    return @@count
+  end
+  
   def self.genres
     list = []
     @@genres.each {|genre| list << genre if !list.include?(genre)}
